@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>api</title>
+
+</head>
+
+<body>
+
+    <!-------------------------------- nav bar ------------------------------------>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                logo da empresa
+            </a>
+            <!-- <a class="btn btn-primary" href="#">
+                continuar comprando
+            </a>
+        </nav> -->
+    </header>
+    <!-------------------------------- DADOS PESSOAL ------------------------------------>
+    <main class="container">
+        <form id="checkout" class="row mt-4">
+
+            <div class="col-md-12">
+                <header class="bg-dark text-white p-2">
+                    dados pessoais
+                </header>
+
+                <!-------------------------------- CRM do Médico ------------------------------------>
+                <div class="p-2">
+                    <label for="CRMdoMedico">CRM do Médico:</label>
+                    <input id="CRMdoMedico" class="form-control" type="text" name="CRMdoMedico"
+                        placeholder="CRM do Médico">
+                </div>
+
+                <!-------------------------------- Nome do médico ------------------------------------>
+                <div class="p-2">
+                    <label for="NomedoMedico">Nome do médico:</label>
+                    <input id="NomedoMedico" class="form-control" type="password" name="NomedoMedico"
+                        placeholder="Nome do médico">
+                </div>
+
+                <!-------------------------------- data da receita ------------------------------------>
+                <div class="p-2">
+                        <label for="DatadaReceita">data da receita:</label>
+                        <input id="DatadaReceita" class="form-control" type="date" name="DatadaReceita"
+                            placeholder="Data da receita">
+                    </div>
+
+                <!-------------------------------- quantidade de caixas ------------------------------------>
+
+                <div class="p-2">
+                    <label for="QuantidadedeCaixas">quantidade de caixas:</label>
+                    <input type="text" class="form-control" id="QuantidadedeCaixas" name="QuantidadedeCaixas"
+                        maxlength="11" placeholder="quantidade de caixas">
+                </div>
+
+                <!-------------------------------- Nome do Paciente ------------------------------------>
+
+                <div class="p-2">
+                    <label for="NomedoPaciente">Nome do Paciente:</label>
+                    <input id="NomedoPaciente" class="form-control" type="tel" name="NomedoPaciente"
+                        placeholder="Nome do Paciente">
+                </div>
+
+                <!-------------------------------- Cpf do paciente ------------------------------------>
+
+                <div class="p-2">
+                    <label for="CpfdoPaciente">Cpf do paciente:</label>
+                    <input id="CpfdoPaciente" class="form-control" type="text" name="CpfdoPaciente"
+                        placeholder="Cpf do paciente">
+                </div>
+
+
+                <!-------------------------------- sexo ------------------------------------>
+                    <div class="p-2">
+                        <label for="Sexo">Sexo:</label>
+                        <select name="Sexo" class="form-control" id="Sexo">
+                            <option value="" disabled selected>Sexo</option>
+                            <option value="SP">Não revelar</option>
+                            <option value="RJ">Masculino</option>
+                            <option value="ES">Femenino</option>
+                        </select>
+                    </div>
+
+
+
+                <!-------------------------------- Tipo de Envio ------------------------------------>
+
+                <div class="p-2 row">
+                    <div class="col-4">
+                        <label for="Anexar">Anexar:</label>
+                        <input id="Anexar" type="radio" name="frete">
+                    </div>
+                    <div class="col-4">
+                        <label for="Whatsapp">Whatsapp:</label>
+                        <input id="Whatsapp" type="radio" name="frete">
+
+                    </div>
+                    <div class="col-4">
+                        <label for="E-mail">E-mail:</label>
+                        <input id="E-mail" type="radio" name="frete">
+
+                    </div>
+                </div>
+
+                <!-------------------------------- Botão ------------------------------------>
+
+                <div class="d-flex justify-content-start">
+                    <button class="btn btn-success" type="button" data-toggle="modal"
+                        data-target="#compraFinalizada"> Finalizar Compra</button>
+                </div>
+
+            </div>
+        </div>
+
+        </form>
+
+    </main>
+
+    <div id="compraFinalizada" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Compra realizada com sucesso </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Uhuul!!!! <br> parabens pela sua compra</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">beleza</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+
+</html>

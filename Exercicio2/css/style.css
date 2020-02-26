@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the header */
+  .header {
+    background-color: #ffffff;
+    padding-top: 1px;
+    text-align: start;
+    font-size: 10px;
+  }
+  h1{
+      margin-left: 1%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+    background-color:#ffffff ;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
